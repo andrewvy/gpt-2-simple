@@ -306,7 +306,7 @@ def finetune(sess,
             fp.write('\n'.join(all_text))
 
     def sample_batch():
-        return [data_sampler.sample(1024) for _ in range(batch_size)]
+        return [data_sampler.sample(256) for _ in range(batch_size)]
 
     if overwrite and restore_from == 'latest':
         for file in files:
